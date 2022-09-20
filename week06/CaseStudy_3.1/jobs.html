@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Case Study 2</title>
     <link rel="stylesheet" href="./CSS/overall.css" />
+
     <style>
       body {
         font-family: sans-serif;
@@ -28,11 +29,13 @@
         display: block;
       }
     </style>
-	<script type="text/javascript" src="./JS/jobs.js"> 
-	</script> 
   </head>
   
   <body>
+    <header>  
+      <script type ="text/javascript" src="fill.js"></script>
+    </header>
+
     <div id="wrapper">
       <div class="header">
         <img src="./images/javajam.jpeg" alt="header" />
@@ -65,6 +68,7 @@
               id="name"
               required
               placeholder="Enter your name here"
+              onchange="validateName()"
             />
 
             <label for="email">*E-mail:</label>
@@ -74,10 +78,11 @@
               id="email"
               required
               placeholder="Enter your Email-ID here"
+              onchange="validateEmail()"
             />
 
             <label for="startDate">Start Date:</label>
-            <input type="date" name="startDate" id="startDate" />
+            <input type="date" name="startDate" id="startDate" onchange="validateDate()"/>
 
             <label for="experience">*Experience:</label>
             <textarea
