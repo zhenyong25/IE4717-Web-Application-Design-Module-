@@ -39,25 +39,59 @@
                 <br />
                 <span class="bold">Endless Cup $2.00</span>
               </td>
+              <td>
+                Quantity
+                <input type="text" size="5" id="java">
+              </td>
+              <td>
+                Subtotal
+                <input type="text" size="5">
+              </td>
             </tr>
             <tr>
               <td class="bold center">Cafe au Lait</td>
               <td>
                 House blended coffee infused into a smooth, steamed milk.
                 <br />
-                <span class="bold">Single $2.00 Double $3.00</span>
+                <span class="bold">
+                  <input type="radio" name="cafe" onclick="just_java();">Single $2.00</input>
+                  <input type="radio" name="cafe" onclick="just_java();">Double $3.00</input>
+                </span>
+              </td>
+              <td>
+                Quantity
+                <input type="text" size="5">
+              </td>
+              <td>
+                Subtotal
+                <input type="text" size="5">
               </td>
             </tr>
             <tr>
-              <td class="bold center">Iced Capuccino</td>
+              <td class="bold center">Iced Cappuccino</td>
               <td>
                 Sweetened espresso blended with icy-cold milk and served in a
                 chilled glass.
                 <br />
-                <span class="bold">Single $4.75 Double $ 5.75</span>
+                <span class="bold">
+                  <input type="radio" name="cappuccino" id="single" value="4.75">Single $4.75</input>
+                  <input type="radio" name="cappuccino" id="double" value="5.75">Double $5.75</input>
+                </span>
+              </td>
+              <td>
+                Quantity
+                <input type="text" size="5" id="iced_cappuccino">
+              </td>
+              <td>
+                Subtotal
+                <input type="text" size="5">
               </td>
             </tr>
           </table>
+          <div>
+            Total Price
+            <input type="text" size="5" onchange="total_price();">
+          </div>
         </div>
       </div>
 
@@ -68,5 +102,6 @@
       </footer>
 
     </div>
+  <script src="JS/menu.js"></script>
   </body>
 </html>
