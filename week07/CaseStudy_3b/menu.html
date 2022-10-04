@@ -41,12 +41,9 @@
               </td>
               <td>
                 Quantity
-                <input type="text" size="5" id="java">
+                <input type="number" size="5" id="javaquantity" onchange="javaChange()"/>
               </td>
-              <td>
-                Subtotal
-                <input type="text" size="5">
-              </td>
+              <td id="javaprice" class="price">$0.00</td>
             </tr>
             <tr>
               <td class="bold center">Cafe au Lait</td>
@@ -54,18 +51,15 @@
                 House blended coffee infused into a smooth, steamed milk.
                 <br />
                 <span class="bold">
-                  <input type="radio" name="cafe" onclick="just_java();">Single $2.00</input>
-                  <input type="radio" name="cafe" onclick="just_java();">Double $3.00</input>
+                  <input type="radio" name="cafe" value="single" onchange="cafeTypeChange();"/>Single $2.00</input>
+                  <input type="radio" name="cafe" value="double "onchange="cafeTypeChange();"/>Double $3.00</input>
                 </span>
               </td>
               <td>
                 Quantity
-                <input type="text" size="5">
+                <input type="number" size="5" id="cafeQuantity" onchange="cafeQuantityChange()">
               </td>
-              <td>
-                Subtotal
-                <input type="text" size="5">
-              </td>
+              <td id="cafeprice" class="price">$0.00</td>
             </tr>
             <tr>
               <td class="bold center">Iced Cappuccino</td>
@@ -74,24 +68,21 @@
                 chilled glass.
                 <br />
                 <span class="bold">
-                  <input type="radio" name="cappuccino" id="single" value="4.75">Single $4.75</input>
-                  <input type="radio" name="cappuccino" id="double" value="5.75">Double $5.75</input>
+                  <input type="radio" name="cappuccino" value="single" onchange="capuccinoTypeChange();"/>Single $4.75</input>
+                  <input type="radio" name="cappuccino" value="double" onchange="capuccinoTypeChange();"/>Double $5.75</input>
                 </span>
               </td>
               <td>
                 Quantity
-                <input type="text" size="5" id="iced_cappuccino">
+                <input type="number" size="5" id="cappuccinoquantity" onchange="capuccinoQuantityChange()">
               </td>
-              <td>
-                Subtotal
-                <input type="text" size="5">
-              </td>
+              <td id="capuccinoprice" class="price">$0.00</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="bold" align="right">Total Price</td>
+              <td id="totalprice">$0.00</td>
             </tr>
           </table>
-          <div>
-            Total Price
-            <input type="text" size="5" onchange="total_price();">
-          </div>
         </div>
       </div>
 
