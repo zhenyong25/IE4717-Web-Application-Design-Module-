@@ -1,13 +1,13 @@
-var javaPrice = 0, cafePrice = 0, capuccinoPrice = 0, total_price;
+var javaPrice=0, cafePrice=0, capuccinoPrice=0, calTotalPrice;
 var javaQuantity = 0, cafeQuantity = 0, capuccinoQuantity = 0;
 var cafeType;
 
 function javaChange(){
     var javaQuantity = document.getElementById("javaquantity").value; 
-    var javaPrice = javaQuantity * 2;
+    javaPrice = javaQuantity * 2;
     
     document.getElementById("javaprice").innerHTML = "$" + javaPrice.toFixed(2);
-    total_price();  
+    total_price(); 
 }
 
 function cafeTypeChange() {
@@ -68,6 +68,6 @@ function calCapuccinoPrice() {
 
 
 function total_price(){
-    calTotalPrice = javaPrice + cafePrice + capuccinoPrice; 
+    calTotalPrice = cafePrice + capuccinoPrice + javaPrice; 
     document.getElementById("totalprice").innerHTML = "$" + calTotalPrice.toFixed(2);
 } 
