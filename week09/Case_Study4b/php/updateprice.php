@@ -3,10 +3,7 @@
   $singlePrice=$_POST['singlePrice'];
   $doublePrice=$_POST['doublePrice'];
   $name=$_POST['name'];
-
-
- 
-
+  
    @ $db = new mysqli('localhost', 'root', '', 'javajam');
 
   if (mysqli_connect_errno()) {

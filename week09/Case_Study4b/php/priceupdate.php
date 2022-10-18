@@ -86,7 +86,7 @@
                 <input type="submit" class="confirmbutton" value="confirm" >  
                 </form>    
               </span>
-            </td>
+            </td
 
           </tr>
           
