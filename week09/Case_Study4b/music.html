@@ -1,82 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Case Study 3b</title>
-    <link rel="stylesheet" href="./CSS/overall.css" />
-    <style>
-      body {
-        color: #8d4a4f;
-      }
-    </style>
+    <title>JavaJam Coffee House - Music</title>
+    <meta charset="utf-8" />
+    <link href="./CSS/music.css" rel="stylesheet" />
   </head>
   <body>
     <div id="wrapper">
-      <div class="header">
-        <img src="./images/javajam.jpeg" alt="header" />
-      </div>
-      <div id="leftcolumn">
-        <nav>
-          <b>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="music.html">Music</a></li>
-              <li><a href="jobs.html">Jobs</a></li>
-            </ul>
-          </b>
-        </nav>
-      </div>
-
-      <div id="rightcolumn">
-        <div class="content">
-          <h2>Music at JavaJam</h2>
-          <p>
-            The first Friday night each month at JavaJam is a special night.
-            Join us from 8pm to 11pm for some music you won't want to miss.
-          </p>
-          <div id="table">
-            <table border="0">
-              <tr>
-                <td colspan="2" class="bold">JANUARY</td>
-              </tr>
-              <tr>
-                <td><img src="./images/girl.jpg" hspace="30" /></td>
-                <td>
-                  <p>
-                    Melanie Morris entertains with her melodic folk style.
-                    <br />
-                    <span class="bold">CDs are available now!</span>
-                  </p>
-                  <audio controls>
-                    <source src="./audio/melodic.mp3" type="audio/mpeg" />
-                  </audio>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" class="bold">FEBRUARY</td>
-              </tr>
-              <tr>
-                <td><img src="./images/guitar.jpg" hspace="30" /></td>
-                <td>
-                  <p>
-                    Tahoe Greg is back from his tour. New songs. New stories.
-                    <br />
-                    <span class="bold">CDs are available now!</span>
-                  </p>
-                  <audio controls>
-                    <source src="./audio/greg.mp3" type="audio/mpeg" />
-                  </audio>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
+      <header>
+        <!-- http://www.blueeyedrabbit.com/chapter4/javajam4.html -->
+        <img src="./Images/header.jpg" alt="JavaJam Coffee House" />
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h2>Music at JavaJam</h2>
+        <p>
+          The first Friday night each month at JavaJam is a special night. Join
+          us from 8pm to 11pm for some music you won't want to miss.
+        </p>
+        <table border="0">
+          <tr>
+            <td colspan="2">JANUARY</td>
+          </tr>
+          <tr>
+            <td><img src="./Images/melainemorris.jpg" hspace="30" /></td>
+            <td>
+              <p>
+                Melanie Morris entertains with her melodic folk style.
+                <br />
+                <span class="bold">CDs are available now!</span>
+              </p>
+              <audio controls>
+                <source src="./Media/melanie.mp3" type="audio/mpeg" />
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">FEBRUARY</td>
+          </tr>
+          <tr>
+            <td><img src="./Images/tahoegreg.jpg" hspace="30" /></td>
+            <td>
+              <p>
+                Tahoe Greg is back from his tour. New songs. New stories.
+                <br />
+                <span class="bold">CDs are available now!</span>
+              </p>
+              <audio controls>
+                <source src="./Media/greg.mp3" type="audio/mpeg" />
+              </audio>
+            </td>
+          </tr>
+        </table>
+      </main>
       <footer>
-        <small><i>Copyright &copy; 2014 JavaJam Coffee House</i></small
-        ><br />
-        <a href="">zhenyong@shoon.com</a>
+        <small
+          ><i>
+            Copyright &copy; 2014 JavaJam Coffee House
+            <br />
+            <a href="mailto:zhenyong@shoon.com">zhenyong@shoon.com</a>
+          </i></small
+        >
       </footer>
     </div>
   </body>

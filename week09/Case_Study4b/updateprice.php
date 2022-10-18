@@ -3,7 +3,10 @@
   $singlePrice=$_POST['singlePrice'];
   $doublePrice=$_POST['doublePrice'];
   $name=$_POST['name'];
-  
+
+
+ 
+
    @ $db = new mysqli('localhost', 'root', '', 'javajam');
 
   if (mysqli_connect_errno()) {
@@ -11,7 +14,7 @@
      exit;
   }
 
-  $sql = "update coffee set price=$singlePrice where name='".$name."'and is_double=0";
+  $sql = "UPDATE coffee SET price=$singlePrice WHERE name='".$name."'and is_double=0";
 
   if ($db->query($sql) === TRUE) {
     echo "Record updated successfully";
@@ -30,6 +33,6 @@
 }
    $db->close();
 
-  header("Location: http://localhost:8000/Case_Study4a/priceupdate.php");
+  header("Location: http://localhost:8000/case%20study/IE4717---Case-Study/priceupdate.php");
 exit();
 ?>

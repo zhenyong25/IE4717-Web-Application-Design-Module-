@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaJam Coffee House - Menu</title>
+    <meta charset="utf-8" />
+    <link href="./CSS/salesreport.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <!-- http://www.blueeyedrabbit.com/chapter4/javajam4.html -->
+        <img src="./Images/header.jpg" alt="JavaJam Coffee House" />
+      </header>
+      <nav>
+        <ul>
+          <li><a href="salesreport.html">Daily Sales Report</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h2>Click to generate daily sales report:</h2>
+        <form id="form" action="salesreport.php" method="POST">
+            <table border="0">
+                <tr>
+                  <td>
+                    <label>
+                      <input type="checkbox" name="sales_type" value="products" onchange="document.getElementById('form').submit()"/>
+                    </label>
+                  </td>
+                  <td class="bold">Total dollar and quantity sales by products</td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      <input type="checkbox" name="sales_type" value="categories" onchange="document.getElementById('form').submit()">
+                    </label>
+                  </td>
+                  <td class="bold">Total dollar and quantity sales by categories</td>
+                </tr>
+            </table>
+        </form>
+        
+      </main>
+      <footer>
+        <small
+          ><i>
+            Copyright &copy; 2014 JavaJam Coffee House
+            <br />
+            <a href="mailto:zhenyong@shoon.com">zhenyong@shoon.com</a>
+          </i></small
+        >
+      </footer>
+    </div>
+  </body>
+</html>

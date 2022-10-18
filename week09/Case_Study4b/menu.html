@@ -1,37 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Case Study 3b</title>
-    <link rel="stylesheet" href="./CSS/overall.css" />
-    <style>
-      body {
-        color: #701e24;
-      }
-    </style>
+    <title>JavaJam Coffee House - Menu</title>
+    <meta charset="utf-8" />
+    <link href="./CSS/menu.css" rel="stylesheet" />
+    <script type="text/javaScript" src="./JS/menu.js"></script>
   </head>
   <body>
     <div id="wrapper">
-      <div class="header">
-        <img src="./images/javajam.jpeg" alt="header" />
-      </div>
-      <div id="leftcolumn">
-        <nav>
-          <b>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="music.html">Music</a></li>
-              <li><a href="jobs.html">Jobs</a></li>
-            </ul>
-          </b>
-        </nav>
-      </div>
-
-      <div id="rightcolumn">
-        <div class="content">
-          <h2>Coffee at JavaJam</h2>
-          <form action="checkout.php" method="post">
+      <header>
+        <!-- http://www.blueeyedrabbit.com/chapter4/javajam4.html -->
+        <img src="./Images/header.jpg" alt="JavaJam Coffee House" />
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h2>Coffee at JavaJam</h2>
+        <form action="PHP/checkout.php" method="post">
           <table border="0">
             <tr>
               <td class="bold center">Just Java</td>
@@ -40,12 +31,16 @@
                 <br />
                 <span class="bold">Endless Cup $2.00</span>
               </td>
-
-                <td>
-                  Quantity
-                  <input type="number" size="5" id="javaquantity" onchange="javaChange()">
-                </td>
-
+              <td>
+                <input
+                  id="javaquantity"
+                  type="number"
+                  min="0"
+                  placeholder="Quantity"
+                  name="javaquantity"
+                  onchange="javaChange()"
+                />
+              </td>
               <td id="javaprice" class="price">$0.00</td>
             </tr>
             <tr>
@@ -53,39 +48,66 @@
               <td>
                 House blended coffee infused into a smooth, steamed milk.
                 <br />
-
-                  <span class="bold">
-                    <input type="radio" name="cafe" value="Single" onchange="cafeTypeChange();"/> Single $2.00</input>
-                    <input type="radio" name="cafe" value="double" onchange="cafeTypeChange();"/> Double $3.00</input>
-                  </span>
-
+                <span class="bold"
+                  ><input
+                    type="radio"
+                    name="cafe"
+                    value="Single"
+                    onchange="cafeTypeChange()"
+                    checked
+                  />Single $2.00
+                  <input
+                    type="radio"
+                    name="cafe"
+                    value="Double"
+                    onchange="cafeTypeChange()"
+                  />Double $3.00</span
+                >
               </td>
-
-                <td>
-                  Quantity
-                  <input type="number" size="5" id="cafeQuantity" onchange="cafeQuantityChange()">
-                </td>
-                <td id="cafeprice" class="price">$0.00</td>
-
+              <td>
+                <input
+                  id="cafequantity"
+                  type="number"
+                  min="0"
+                  placeholder="Quantity"
+                  name="cafequantity"
+                  onchange="cafeQuantityChange()"
+                />
+              </td>
+              <td id="cafeprice" class="price">$0.00</td>
             </tr>
             <tr>
-              <td class="bold center">Iced Cappuccino</td>
+              <td class="bold center">Iced Capuccino</td>
               <td>
                 Sweetened espresso blended with icy-cold milk and served in a
                 chilled glass.
                 <br />
-
-                  <span class="bold">
-                    <input type="radio" name="cappuccino" value="single" onchange="capuccinoTypeChange();"/>Single $4.75</input>
-                    <input type="radio" name="cappuccino" value="double" onchange="capuccinoTypeChange();"/>Double $5.75</input>
-                  </span>
+                <span class="bold"
+                  ><input
+                    type="radio"
+                    name="capuccino"
+                    value="Single"
+                    onchange="capuccinoTypeChange()"
+                    checked
+                  />Single $4.75
+                  <input
+                    type="radio"
+                    name="capuccino"
+                    value="Double"
+                    onchange="capuccinoTypeChange()"
+                  />Double $ 5.75</span
+                >
               </td>
-
-                <td>
-                  Quantity
-                  $ <input type="number" size="5" id="cappuccinoquantity" onchange="capuccinoQuantityChange()"/>
-                </td>
-
+              <td>
+                <input
+                  id="capuccinoquantity"
+                  type="number"
+                  min="0"
+                  placeholder="Quantity"
+                  name="capuccinoquantity"
+                  onchange="capuccinoQuantityChange()"
+                />
+              </td>
               <td id="capuccinoprice" class="price">$0.00</td>
             </tr>
             <tr>
@@ -93,18 +115,18 @@
               <td id="totalprice">$0.00</td>
             </tr>
           </table>
-          <input type="submit" value="Checkout">
-          </form>
-        </div>
-      </div>
-
+          <input type="submit" value="Check Out" />
+        </form>
+      </main>
       <footer>
-        <small><i>Copyright &copy; 2014 JavaJam Coffee House</i></small
-        ><br />
-        <a href="">zhenyong@shoon.com</a>
+        <small
+          ><i>
+            Copyright &copy; 2014 JavaJam Coffee House
+            <br />
+            <a href="mailto:zhenyong@shoon.com">zhenyong@shoon.com</a>
+          </i></small
+        >
       </footer>
-
     </div>
-  <script src="JS/menu.js"></script>
   </body>
 </html>

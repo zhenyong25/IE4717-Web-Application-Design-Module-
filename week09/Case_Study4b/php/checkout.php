@@ -1,6 +1,6 @@
 <?php
     $javaqty = $_POST["javaquantity"];
-    $cafeqty = $_POST["cafeQuantity"];
+    $cafeqty = $_POST["cafequantity"];
     $capuccinoqty = $_POST["capuccinoquantity"];
     $cafetype = $_POST["cafe"];
     $capuccinotype = $_POST["capuccino"];
@@ -18,11 +18,10 @@
         exit;
     }
 
-
     if ($javaqty) {
         $javaprice = $javaqty * 2;
         $query = "insert into sales values
-                 ('Just Java', NULL, '".$javaqty."', '".$javaprice."')";
+                 (NULL,'Just Java', NULL, '".$javaqty."', '".$javaprice."')";
         $result = $db->query($query);
 
         if (!$result) {
@@ -38,7 +37,7 @@
             $cafeprice = $cafeqty * 3;
         }
         $query = "insert into sales values
-                 ('Cafe au Lait', '".$cafetype."', '".$cafeqty."', '".$cafeprice."')";
+                 (NULL,'Cafe au Lait', '".$cafetype."', '".$cafeqty."', '".$cafeprice."')";
         $result = $db->query($query);
 
         if (!$result) {
@@ -53,7 +52,7 @@
             $capuccinoprice = $capuccinoqty * 5.75;
         }
         $query = "insert into sales values
-                 ('Iced Cappuccino', '".$capuccinotype."', '".$capuccinoqty."', '".$capuccinoprice."')";
+                 (NULL,'Iced Cappuccino', '".$capuccinotype."', '".$capuccinoqty."', '".$capuccinoprice."')";
         $result = $db->query($query);
 
         if (!$result) {
@@ -65,6 +64,6 @@
 
     echo '<script>alert("Your order has been processed");</script>';
 
-    header("Location: http://localhost:8000/Case_Study4b/sales_report.html");
+    header("Location: http://localhost:8000/IE4717/Case_Study4b/menu.html");
     exit();
 ?>
